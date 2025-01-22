@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let menu = "";
+        let baralho = [];
+        let carta = "";
+        do{
+            menu = prompt(`Puxe uma carta!!\n\ntotal de cartas ${baralho.length} escolha uma das opções abaixo:
+            \n1 - Adicionar uma carta\n2 - Puxar uma carta\n3 - Sair do programa.    
+            `)
+
+            switch(menu){
+                case "1":
+                    carta = prompt("selecione a carta:")
+                    let add = baralho.unshift(carta)
+
+                    alert(`Carta ${carta} adicionada ao baralho!`)
+                break
+
+                case "2":
+                    let puxar = baralho.shift()
+                    alert(`Carta ${puxar} puxada!!`)
+                break
+
+                case "3":
+                    alert(`encerrando o programa...`)
+                break
+
+                default:
+                    alert("opção invalida!!")    
+            }   
+        }while(menu !== "3")
+
+
+    </script>
+</body>
+</html>
+
+<!-- Escrever um programa que simule um baralho de cartas 
+    o programa deve possuir:
+    menu interativo;
+    adicionar uma carta ao topo do baralho;
+    puxar uma carta do topo do baralho;
+    sair do programa.
+-->
