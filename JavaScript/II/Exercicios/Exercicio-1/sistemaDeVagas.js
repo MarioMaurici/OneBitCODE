@@ -30,50 +30,28 @@ A opção de excluir uma vaga deve pedir o índice da vaga, mostrar suas informa
 Este é o exercício de revisão do módulo, então aproveite para utilizar todos os recursos vistos até agora sempre que possível, como os objetos, arrays e funções.
 */
 
-
-let menu = ''
 let vagas = []
 
-do{
-    menu = prompt("Bem vindo ao Busca empregos!!\n\n Selecione uma opção\n 1- Vagas Disponiveis\n 2- Criar uma nova Vaga \n3- Visualizar vaga\n4- Inscrever-se em uma vaga\n5- Excluir uma vaga\n6- Sair")
+function criarVaga(){
+    let nome = prompt("Informe o nome da vaga")
+    let descricao = prompt("Diga sobre a vaga")
+    let datalimite = prompt("Data limite")
 
-    switch(menu){
-        case "1":
-            if(vagas.length > 0) {
-                for(let i = 0; i < vagas.length; i++){
-                    alert(`vaga: ${i+1}\nNome da vaga: ${vagas[i].vaga.nome}\nQuantidade de candidatos ${vagas[i].vaga.candidato.length}`)
-                }
-            }else{
-                alert('Nenhuma vaga encontrado!!')
-            }            
-        break
-        case "2":
-            let vaga = {
-                nome: prompt('Informe nome da vaga'),
-                descricao: prompt('Informe uma descrição sobre a vaga'),
-                dataLimite: prompt('Até quando a vaga ficará disponivel?(DD/MM/YY)'),
-                candidato:{}
-            }
-
-            let confirmacao = confirm('vaga: ' + vaga.nome + '\ndescrição: ' + vaga.descricao + '\nData limite: '+ vaga.dataLimite);
-
-            if(confirmacao){
-                const aux = {vaga}
-                let cadastrar = vagas.push(aux)
-                alert('Cadastrado!!')
-            }
-            
-        break
-        case "3":
-        break
-        case "3":
-        break
-        case "4":
-        break
-        case "5":
-        break
-        case "6":
-        break
-        default:
+    let confirmacao = confirm("Confirme os seguinte dados:\n\nNome da vaga:" + nome + "\nDescrição: " + descricao + "\nData Limite: " + datalimite)
+    if (confirmacao) {
+        alert("Dados cadastrados!!")
+        let novaVaga = {nome, descricao, datalimite, candidato: []}
+        let cadastrar = vagas.push(novaVaga)
     }
-}while(menu !== "6");
+}
+
+function visualizarVaga(){
+    let indice = parseFloat(prompt("Informe o Indice da vaga: "))
+    let vaga = vagas[i]
+    alert(
+        "Vaga: " + vaga.nome +
+        "Descrição: " + vaga.descricao +
+        "Data Limite: " + vaga.datalimite +
+        "Candidatos: " + vaga.candidato.length
+    )
+}
