@@ -4,8 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="./index.js"></script>
 </head>
 <body>
+    <h1>Escalação Clube de Regatas Vasco da Gama</h1>
+    <p>Escalar Jogadores</p>
+
+
+    <section>
+        <label for="nome_jogador">Nome</label>
+        <input type="text" name="nome_jogador" id="nome_jogador">
+
+        <label for="posicao">Posição</label>
+        <input type="text" name="´posicao" id="posicao">
+
+        <label for="numero_camisa">Número da Camisa</label>
+        <input type="number" name="numero_camisa" id="numero_camisa">
+
+        <button onclick="novoJogador()">Adicionar</button>
+    </section>
+
+    <section>
+        <h3>Excluir Jogadores</h3>
+        <label for="delete">número da camisa</label>
+        <input type="number" name="delete" id="delete">
+        <button onclick="excluirJogador()">Delete</button>
+
+
+    </section>
+
+
+    <h3>Escalação</h3>
+    <ul>
+    </ul>
+
     
 </body>
 </html>
