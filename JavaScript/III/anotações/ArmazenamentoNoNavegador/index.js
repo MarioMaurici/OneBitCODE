@@ -15,6 +15,19 @@
 */
 // Exemplo: 
 
+//guardando um item dentro do sessionStorage
+document.getElementById('sessionBtn').addEventListener('click', function(){
+    const input = document.getElementById('session')
+    sessionStorage.setItem('info', input.value)
+    input.value
+})
+
+//lendo o item salvo
+document.getElementById('readSesssion').addEventListener('click', function(){
+    const info = sessionStorage.getItem('info')
+    alert('a informação salva é' + info)
+})
+
 //Local Storage
 /* 
     -- Dados armazenados no navegador que pesistem mesmo após fechar a aba/janela do navegador
@@ -25,6 +38,16 @@
     no caso do usuario querer que o login persista, você pode utilizar o Local Storage
 */
 // Exemplo:
+document.getElementById('localBtn').addEventListener('click', function(){
+    const input = document.getElementById('local')
+    localStorage.setItem('text', input.value)
+    input.value = ''
+})
+
+document.getElementById('readLocal').addEventListener('click', function(){
+    const t = localStorage.getItem('text')
+    alert('a informacao salva é: ' + t)
+})
 
 //Cookies
 /*
@@ -41,3 +64,24 @@
     --É possivel salva-las no back-end
 */
 // Exemplo:
+document.getElementById('cookieBtn').addEventListener('click', function(){
+    const input = document.getElementById('cookie')
+    //informações passadas para um cookie: cookieName = value; expiresUTCStringDate(data de expiração do cookie); path=/(caminho);
+    const cookie = 'info=' + input.value + ';' // nome e valor do cookie
+    const expiration = 'expires=' + new Date(2026,3,3) + ';' //em qual data esse cookie ficara disponivel?
+    const path = 'path=/;' //em qual caminhos esse cookie ficara disponivel?
+    document.cookie = cookie + expiration + path
+    input.value = ''
+    console.log(document.cookie)
+})
+
+document.getElementById('cookie2Btn').addEventListener('click', function(){
+    const input = document.getElementById('cookie2')
+    //informações passadas para um cookie: cookieName = value; expiresUTCStringDate(data de expiração do cookie); path=/(caminho);
+    const cookie = 'text=' + input.value + ';' // nome e valor do cookie
+    const expiration = 'expires=' + new Date(2026,3,3) + ';' //em qual data esse cookie ficara disponivel?
+    const path = 'path=/;' //em qual caminhos esse cookie ficara disponivel?
+    document.cookie = cookie + expiration + path
+    input.value = ''
+    console.log(document.cookie)
+})
