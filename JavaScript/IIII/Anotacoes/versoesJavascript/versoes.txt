@@ -1,0 +1,35 @@
+O javascript é uma linguagem em constante atualização
+
+versões:
+    - ES1 - 1997
+    - ES2 - 1998
+    - ES3 - 1999
+    - ES4 - Nunca foi lançada
+    - ES5 - 2009
+;
+
+Em 2015 as atualizações passaram a ser anual, como era no começo. A partir desse momento foi passado a se idenficar por ano.
+
+exemplos de versões:
+    - ES2016
+    - ES2017
+    - etc
+;
+
+Cada versão trouxe novos recusos e conheceremos esses recusos nesse módulo.
+
+
+Compatilidade de Recursos
+
+Os recursos do javascript precisam ser implementados pelo navegador e seus interpretadores para que funcionem;
+
+No entanto, os navegadores podem demorar a implementar os recursos das atualizações do javascript (ou as vezes nunca implementá-las);
+
+Isso cria o problema de nem sempre os recursos mais novos do javascript estarem disponiveis nos navegadores(ex.: Internet Explorer);
+
+Para saber mais sobre a Compatilidade dos recursos temos duas fontes principais:
+    - MDN Web Docs: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript
+    - Can I Use: https://caniuse.com/
+;
+
+Nesse módulo tambem aprenderemos como resolver esses problema de compatilidade.
